@@ -11,8 +11,8 @@
     - [ ] Deverá conter um endpoint de consulta com paginação de 10 em 10 a todos os filmes que estiver no nosso banco de dados;
     - [ ] Os dados deverão ser salvas em um banco de dados ([API de extração](`título`));
   - `Frontend`:
-    - [ ] Deverá conter uma tela de exibição dos filmes, consutaldos em paginação do backend.
-    - [ ] Deverá conter um botão de atualizar, que vai puxar os 50 filmes da API externa e atualizar o banco de dados da API do projeto.
+    - [ ] Deverá conter uma tela de exibição dos filmes, consutaldos em paginação do backend;
+    - [ ] Deverá conter um botão de atualizar, que vai puxar os 50 filmes da API externa e atualizar o banco de dados da API do projeto;
   - `Diferenciais`:
     - [ ] Cobertura de testes no front e backend;
     - [ ] Boas práticas de desenvolvimento e clean code;
