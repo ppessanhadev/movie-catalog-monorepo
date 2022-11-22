@@ -1,10 +1,11 @@
-import { Hello } from '@components/Hello';
+import { Header } from '@components/Header';
 import * as S from './styles';
 
 export const Home: React.FC = () => {
   return (
-    <S.Container>
-      <Hello message='pessoas!' />
-    </S.Container>
+    <>
+      <Header />
+      <S.Container></S.Container>
+    </>
   );
 };

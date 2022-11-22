@@ -16,13 +16,10 @@ module.exports = {
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-      typescript: {
-        project: path.join(__dirname, './tsconfig.json'),
+        moduleDirectory: ['src', 'node_modules'],
       },
     },
   },
-  
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -30,8 +27,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-target-blank': 'off',
-    'react/prop-types': 'off'
+    'import/no-unresolved': 'off',
+    'react/prop-types': 'off',
   },
 };
-
-
