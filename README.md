@@ -9,7 +9,7 @@
     - [ ] Deverá ser uma API desenvolvida em NodeJS;
     - [ ] Deverá conter um endpoint ao qual consulta 50 filmes com as informações `título`, `banner`, `descrição`, `produtor` e `diretor`;
     - [ ] Deverá conter um endpoint de consulta com paginação de 10 em 10 a todos os filmes que estiver no nosso banco de dados;
-    - [ ] Os dados deverão ser salvas em um banco de dados ([API de extração](`título`));
+    - [ ] Os dados deverão ser salvas em um banco de dados ([API de extração](https://ghibliapi.herokuapp.com/#tag/Films));
   - `Frontend`:
     - [ ] Deverá conter uma tela de exibição dos filmes, consutaldos em paginação do backend;
     - [ ] Deverá conter um botão de atualizar, que vai puxar os 50 filmes da API externa e atualizar o banco de dados da API do projeto;
