@@ -6,8 +6,8 @@ import { INestApplication, Logger, VersioningType } from '@nestjs/common';
 
 const swaggerConfig = (app: INestApplication) => {
   const config = new DocumentBuilder()
-    .setTitle('Qlqlr coisa;')
-    .setDescription('mais uma coisa')
+    .setTitle('Movie catalog API')
+    .setDescription('A simple API maded to consult a list of movies')
     .setVersion('1.0.0')
     .build();
 
