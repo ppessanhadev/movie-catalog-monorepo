@@ -4,5 +4,5 @@ interface HelloProps {
 
 export const Hello: React.FC<HelloProps> = ({ message }) => {
   if (!message) return <></>;
-  return <h1>{message}</h1>;
+  return <h1>Olá, {message}</h1>;
 };
