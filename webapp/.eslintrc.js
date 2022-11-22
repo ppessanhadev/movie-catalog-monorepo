@@ -17,8 +17,12 @@ module.exports = {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+      typescript: {
+        project: path.join(__dirname, './tsconfig.json'),
+      },
     },
   },
+  
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

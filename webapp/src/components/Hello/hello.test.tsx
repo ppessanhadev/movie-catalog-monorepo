@@ -1,6 +1,5 @@
 import { Hello } from '.';
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { expect, describe, it, render } from '@utils/test-essentials';
 
 describe('<Hello />', () => {
   it('should render a h1 tag with dynamic message', () => {
