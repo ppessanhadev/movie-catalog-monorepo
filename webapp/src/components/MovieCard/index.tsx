@@ -1,10 +1,22 @@
 import * as S from './styles';
 
-export const MovieCard: React.FC = () => {
+interface MovieCardProps {
+  id: string;
+  title: string;
+  banner: string;
+  director: string;
+  producer: string;
+  description: string;
+}
+
+export const MovieCard: React.FC<MovieCardProps> = (props) => {
   return (
-    <S.Card>
+    <S.Card className="movie-card" url={props.banner}>
       <S.Info>
-        <h2>Laputa - The castle in the sky</h2>
+        <h2>{props.title}</h2>
+        <h4>Director: {props.director}</h4>
+        <h4>Producer: {props.producer}</h4>
+        <p>{props.description}</p>
       </S.Info>
     </S.Card>
   );
