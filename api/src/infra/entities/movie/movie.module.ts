@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { MovieRepository } from './movie.repository';
 import { DatabaseModule } from '@infra/database/database.module';
+import { MovieRepository } from '@entities/movie/movie.repository';
 
 @Module({
   imports: [DatabaseModule],

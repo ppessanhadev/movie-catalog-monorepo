@@ -1,5 +1,5 @@
-import { Movie } from './Movie';
 import { ApiProperty } from '@nestjs/swagger';
+import { Movie } from '@schemas/movie/Movie';
 
 export class MovieResponse {
   @ApiProperty({ type: [Movie] })

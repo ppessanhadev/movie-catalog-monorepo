@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { GhibliModule } from './ghibli/gihbli.module';
+import { GhibliModule } from '@providers/ghibli/gihbli.module';
 
 @Module({
   imports: [GhibliModule],

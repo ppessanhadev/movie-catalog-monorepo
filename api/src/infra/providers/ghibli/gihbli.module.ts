@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
-import { GhibliProvider } from './ghibli.provider';
+import { GhibliProvider } from '@providers/ghibli/ghibli.provider';
 
 @Module({
   imports: [HttpModule],
