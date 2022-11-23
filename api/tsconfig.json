@@ -22,7 +22,8 @@
       "@domain/*": ["src/domain/*"],
       "@infra/*": ["src/infra/*"],
       "@controllers/*": ["src/presentation/controllers/*"],
-      "@shared/*": ["src/shared/*"],
+      "@schemas/*": ["src/shared/schemas/*"],
+      "@decorators/*": ["src/utils/decorators/*"]
     }
   }
 }

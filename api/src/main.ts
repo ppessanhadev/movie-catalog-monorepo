@@ -1,6 +1,5 @@
 import { AppModule } from 'src/app.module';
 import { NestFactory } from '@nestjs/core';
-import { BaseConfig } from '@core/config/base-config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { INestApplication, Logger, VersioningType } from '@nestjs/common';
 
@@ -22,13 +21,13 @@ const appConfig = (app: INestApplication) => {
 };
 
 const initialize = async () => {
-  const { port } = new BaseConfig();
+  const port = process.env.PORT || '3000';
   const app = await NestFactory.create(AppModule);
 
   appConfig(app);
   swaggerConfig(app);
 
-  await app.listen(3000);
+  await app.listen(port);
   Logger.log(`Server is running on port ${port}`, 'NestApplication');
 };
 
