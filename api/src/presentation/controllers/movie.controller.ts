@@ -15,9 +15,18 @@ export class MovieController {
   @CustomQueryGet({
     summary: 'This route lists all movies with pagination',
     responseType: MovieResponse,
-    query: 'page',
+    name: 'page',
   })
   public async list(@Query('page', ParseIntPipe) page: number) {
     return this.movieService.list(page);
+  }
+
+  @CustomQueryGet({
+    route: 'update',
+    summary: 'This route lists all movies with pagination',
+    responseType: MovieResponse,
+  })
+  public async update() {
+    return this.movieService.update();
   }
 }

@@ -18,12 +18,13 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@core/*": ["src/core/*"],
+      "@providers/*": ["src/infra/providers/*"],
       "@domain/*": ["src/domain/*"],
       "@infra/*": ["src/infra/*"],
       "@controllers/*": ["src/presentation/controllers/*"],
       "@schemas/*": ["src/shared/schemas/*"],
-      "@decorators/*": ["src/utils/decorators/*"]
+      "@interfaces/*": ["src/shared/interfaces/*"],
+      "@decorators/*": ["src/utils/decorators/*"],
     }
   }
 }

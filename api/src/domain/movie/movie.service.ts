@@ -1,11 +1,15 @@
-import { MovieRepository } from '@infra/entities/movie/movie.repository';
 import { Inject, Injectable } from '@nestjs/common';
+import { MovieRepository } from '@infra/entities/movie/movie.repository';
+import { GhibliProvider } from '@infra/providers/ghibli/ghibli.provider';
 
 @Injectable()
 export class MovieService {
   constructor(
     @Inject(MovieRepository)
     private movieRepository: MovieRepository,
+
+    @Inject(GhibliProvider)
+    private ghibliProvider: GhibliProvider,
   ) {}
 
   public async list(page: number) {
@@ -17,5 +21,9 @@ export class MovieService {
     const count = Math.ceil(amount / 10);
 
     return { movies, count };
+  }
+
+  public async update() {
+    return this.ghibliProvider.listMovies();
   }
 }
