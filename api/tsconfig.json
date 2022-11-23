@@ -24,7 +24,7 @@
       "@controllers/*": ["src/presentation/controllers/*"],
       "@schemas/*": ["src/shared/schemas/*"],
       "@interfaces/*": ["src/shared/interfaces/*"],
-      "@decorators/*": ["src/utils/decorators/*"],
+      "@decorators/*": ["src/presentation/decorators/*"],
     }
   }
 }
