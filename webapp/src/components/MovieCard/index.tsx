@@ -1,8 +1,7 @@
 import * as S from './styles';
 
 interface MovieCardProps {
-  id: string;
-  title: string;
+  title?: string;
   banner: string;
   director: string;
   producer: string;

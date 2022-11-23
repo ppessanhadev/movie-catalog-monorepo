@@ -23,5 +23,17 @@ export default defineConfig({
     setupFiles: ['./vitest-setup.ts'],
     include: ['./src/**/?(*.)+(spec|test|tests).[tj]s?(x)'],
     exclude: ['node_modules/', '.out/', 'public/'],
+    coverage: {
+      include: ['src/components/**/*'],
+      exclude: [
+        'src/utils',
+        'src/**/?(*.)+(spec|test|tests).[tj]s?(x)',
+        'src/**/styles.ts',
+      ],
+      statements: 80,
+      branches: 50,
+      functions: 80,
+      lines: 100,
+    },
   },
 });
