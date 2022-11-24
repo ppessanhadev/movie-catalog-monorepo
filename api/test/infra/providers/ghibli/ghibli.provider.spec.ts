@@ -7,6 +7,12 @@ import { ghibliListMovieResponseMock } from '@test/stubs/ghibli-response';
 describe('Ghibli Provider', () => {
   let ghibliProvider: GhibliProvider;
   let axiosService: HttpService;
+  const environment = { ...process.env };
+
+  beforeAll(() => {
+    const mockEnvironment = { ...process.env, GHIBLI_URL: 'test' };
+    process.env = mockEnvironment;
+  });
 
   beforeEach(async () => {
     const moduleRef = await Test.createTestingModule({
@@ -19,6 +25,10 @@ describe('Ghibli Provider', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+  });
+
+  afterAll(() => {
+    process.env = environment;
   });
 
   it('should be defined', () => {
@@ -41,9 +51,7 @@ describe('Ghibli Provider', () => {
       await ghibliProvider.listMovies();
 
       expect(axiosService.get).toHaveBeenCalledTimes(1);
-      expect(axiosService.get).toHaveBeenCalledWith(
-        'https://ghibliapi.herokuapp.com/films',
-      );
+      expect(axiosService.get).toHaveBeenCalledWith('test');
     });
   });
 });

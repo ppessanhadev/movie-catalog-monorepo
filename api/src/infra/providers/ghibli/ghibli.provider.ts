@@ -12,10 +12,9 @@ export class GhibliProvider extends GhibliAdapter {
 
   public async listMovies() {
     try {
+      const url = process.env.GHIBLI_URL;
       const { data } = await firstValueFrom(
-        this.axiosService.get<GhibliListMoviesResponse[]>(
-          'https://ghibliapi.herokuapp.com/films',
-        ),
+        this.axiosService.get<GhibliListMoviesResponse[]>(url),
       );
 
       return this.transform(data);
