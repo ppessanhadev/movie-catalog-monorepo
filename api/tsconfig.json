@@ -22,7 +22,7 @@
       "@test/*": ["test/*"],
       "@domain/*": ["src/domain/*"],
       "@infra/*": ["src/infra/*"],
-      "@entities/*": ["src/infra/entities/*"],
+      "@repositories/*": ["src/infra/repositories/*"],
       "@controllers/*": ["src/presentation/controllers/*"],
       "@schemas/*": ["src/shared/schemas/*"],
       "@shared/*": ["src/shared/*"],
