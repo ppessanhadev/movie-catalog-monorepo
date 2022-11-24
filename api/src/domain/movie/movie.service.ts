@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { MovieRepository } from '@infra/entities/movie/movie.repository';
 import { GhibliProvider } from '@infra/providers/ghibli/ghibli.provider';
+import { Movie } from '@prisma/client';
 
 @Injectable()
 export class MovieService {
@@ -24,6 +25,8 @@ export class MovieService {
   }
 
   public async update() {
-    return this.ghibliProvider.listMovies();
+    const moviesGhibli = (await this.ghibliProvider.listMovies()) as unknown;
+
+    await this.movieRepository.insertMany(moviesGhibli as Movie[]);
   }
 }

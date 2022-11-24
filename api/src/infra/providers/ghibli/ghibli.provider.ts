@@ -1,8 +1,8 @@
 import { firstValueFrom } from 'rxjs';
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { HttpService as AxiosService } from '@nestjs/axios';
 import { GhibliAdapter } from '@providers/ghibli/ghibli.adapter';
-import { GhibliListMoviesResponse } from '@interfaces/GhibliListMovieRespose';
+import { GhibliListMoviesResponse } from 'src/shared/types/GhibliListMovieRespose';
 
 @Injectable()
 export class GhibliProvider extends GhibliAdapter {
@@ -11,12 +11,16 @@ export class GhibliProvider extends GhibliAdapter {
   }
 
   public async listMovies() {
-    const { data } = await firstValueFrom(
-      this.axiosService.get<GhibliListMoviesResponse[]>(
-        'https://ghibliapi.herokuapp.com/films',
-      ),
-    );
+    try {
+      const { data } = await firstValueFrom(
+        this.axiosService.get<GhibliListMoviesResponse[]>(
+          'https://ghibliapi.herokuapp.com/films',
+        ),
+      );
 
-    return data;
+      return this.moviesAdapter(data);
+    } catch (error) {
+      throw new InternalServerErrorException(error.message);
+    }
   }
 }

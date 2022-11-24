@@ -25,6 +25,7 @@ export class MovieController {
     route: 'update',
     summary: 'This route lists all movies with pagination',
     responseType: MovieResponse,
+    code: 204,
   })
   public async update() {
     return this.movieService.update();

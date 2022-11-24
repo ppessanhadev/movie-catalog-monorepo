@@ -1,4 +1,4 @@
-export interface GhibliListMoviesResponse {
+export type GhibliListMoviesResponse = {
   /**
    * Movie USA title
    *
@@ -54,4 +54,4 @@ export interface GhibliListMoviesResponse {
    * Example - `running_time: 124`
    */
   running_time: string;
-}
+};

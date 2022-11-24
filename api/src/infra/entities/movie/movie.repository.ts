@@ -1,5 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { DatabaseService } from '@infra/database/database.service';
+import { Movie } from '@prisma/client';
 
 @Injectable()
 export class MovieRepository {
@@ -7,6 +8,10 @@ export class MovieRepository {
     @Inject(DatabaseService)
     private database: DatabaseService,
   ) {}
+
+  public async insertMany(data: Movie[]) {
+    return this.database.movie.createMany({ data });
+  }
 
   public async list(skip: number) {
     return this.database.movie.findMany({
