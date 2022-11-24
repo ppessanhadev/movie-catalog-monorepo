@@ -4,7 +4,7 @@ setup:
       as: DATABASE
 build:
   docker:
-    api: Dockerfile
+    api: api/Dockerfile
     worker: api/Dockerfile
 run:
   api: yarn start:prod
