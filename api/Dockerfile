@@ -1,14 +1,14 @@
-FROM node:18.8.0-alpine
-
-# curl needed to display Heroku release logs
-RUN apk --no-cache add curl
+FROM node:16-slim
+RUN apt-get update
+RUN apt-get install -y openssl
 
 WORKDIR /app
 
-COPY package.json ./
-RUN yarn install
+COPY package*.json ./
 
 COPY . /app
 
-RUN yarn prisma generate
-RUN yarn build
+RUN npx prisma generate
+RUN npm run build
+
+CMD npm run start:prod
