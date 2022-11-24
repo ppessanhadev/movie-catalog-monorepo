@@ -3,7 +3,7 @@ FROM node:16-alpine as builder
 USER node
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
@@ -20,7 +20,7 @@ USER node
 WORKDIR /usr/src/app
 
 # Copy files from base image 'builder' to this instance of build
-COPY --from=builder --chown=node:node /usr/src/app/package*.json ./
+COPY --from=builder --chown=node:node /usr/src/app/package.json ./
 COPY --from=builder --chown=node:node /usr/src/app/node_modules/ ./node_modules/
 COPY --from=builder --chown=node:node /usr/src/app/dist/ ./dist/
 
