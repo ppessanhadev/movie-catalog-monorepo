@@ -5,7 +5,7 @@ RUN apk --no-cache add curl
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json ./
 RUN yarn install
 
 COPY . /app
