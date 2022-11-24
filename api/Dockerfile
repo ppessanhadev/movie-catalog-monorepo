@@ -5,12 +5,12 @@ WORKDIR /home/node
 
 COPY package.json ./
 
-RUN yarn
+RUN npm install
 
 COPY --chown=node:node . .
 
-RUN yarn prisma generate
-RUN yarn build
+RUN npm run prisma generate
+RUN npm run build
 
 FROM node:16-alpine
 
