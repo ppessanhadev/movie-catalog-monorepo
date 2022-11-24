@@ -1,4 +1,4 @@
-import { GhibliListMoviesResponse } from '@interfaces/GhibliListMovieRespose';
+import { GhibliListMoviesResponse } from '@shared/types/GhibliListMovieResponse';
 export class GhibliAdapter {
   protected moviesAdapter(movies: GhibliListMoviesResponse[]) {
     return movies.map((movie) => {

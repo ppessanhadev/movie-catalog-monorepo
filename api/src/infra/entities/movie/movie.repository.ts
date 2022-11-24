@@ -13,6 +13,10 @@ export class MovieRepository {
     return this.database.movie.createMany({ data });
   }
 
+  public async deleteAll() {
+    return this.database.movie.deleteMany({});
+  }
+
   public async list(skip: number) {
     return this.database.movie.findMany({
       skip,

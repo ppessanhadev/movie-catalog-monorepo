@@ -2,7 +2,7 @@ import { firstValueFrom } from 'rxjs';
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { HttpService as AxiosService } from '@nestjs/axios';
 import { GhibliAdapter } from '@providers/ghibli/ghibli.adapter';
-import { GhibliListMoviesResponse } from 'src/shared/types/GhibliListMovieRespose';
+import { GhibliListMoviesResponse } from '@shared/types/GhibliListMovieResponse';
 
 @Injectable()
 export class GhibliProvider extends GhibliAdapter {

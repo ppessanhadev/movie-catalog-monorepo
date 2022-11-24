@@ -27,6 +27,7 @@ export class MovieService {
   public async update() {
     const moviesGhibli = (await this.ghibliProvider.listMovies()) as unknown;
 
+    await this.movieRepository.deleteAll();
     await this.movieRepository.insertMany(moviesGhibli as Movie[]);
   }
 }

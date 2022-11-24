@@ -19,12 +19,13 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "@providers/*": ["src/infra/providers/*"],
+      "@test/*": ["test/*"],
       "@domain/*": ["src/domain/*"],
       "@infra/*": ["src/infra/*"],
       "@entities/*": ["src/infra/entities/*"],
       "@controllers/*": ["src/presentation/controllers/*"],
       "@schemas/*": ["src/shared/schemas/*"],
-      "@interfaces/*": ["src/shared/types/*"],
+      "@shared/*": ["src/shared/*"],
       "@decorators/*": ["src/presentation/decorators/*"],
     }
   }
