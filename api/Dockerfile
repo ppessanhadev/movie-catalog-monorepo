@@ -10,6 +10,7 @@ RUN yarn install
 
 COPY . /app
 
+RUN yarn prisma generate
 RUN yarn build
 
 CMD yarn start:prod
