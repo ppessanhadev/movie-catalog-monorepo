@@ -1,7 +1,7 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { MovieRepository } from '@infra/entities/movie/movie.repository';
-import { GhibliProvider } from '@infra/providers/ghibli/ghibli.provider';
 import { Movie } from '@prisma/client';
+import { Inject, Injectable } from '@nestjs/common';
+import { MovieRepository } from '@repositories/movie/movie.repository';
+import { GhibliProvider } from '@infra/providers/ghibli/ghibli.provider';
 
 @Injectable()
 export class MovieService {
