@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
-import { mockModule } from '@test/domain/movie/movie.spec.setup';
 import { movies } from '@test/stubs/movies';
 import { MovieService } from '@domain/movie/movie.service';
+import { mockModule } from '@test/domain/movie/movie.spec.setup';
 import { GhibliProvider } from '@providers/ghibli/ghibli.provider';
 import { MovieRepository } from '@infra/repositories/movie/movie.repository';
 
@@ -30,7 +30,7 @@ describe('Movie Service', () => {
     expect(ghibliProvider).toBeDefined();
   });
 
-  describe('findAll', () => {
+  describe('list()', () => {
     it('should return a list of movies sucessfully', async () => {
       const response = await movieService.list(0);
       const pages = Math.ceil(movies.length / 10);
@@ -46,6 +46,16 @@ describe('Movie Service', () => {
       expect(movieRepository.list).toHaveBeenCalledWith(10);
 
       expect(movieRepository.count).toBeCalledTimes(2);
+    });
+  });
+
+  describe('update()', () => {
+    it('should delete and add new movies from providers response', async () => {
+      await movieService.update();
+
+      expect(ghibliProvider.listMovies).toHaveBeenCalledTimes(1);
+      expect(movieRepository.deleteAll).toHaveBeenCalledTimes(1);
+      expect(movieRepository.insertMany).toHaveBeenCalledWith(movies);
     });
   });
 });

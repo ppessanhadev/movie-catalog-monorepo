@@ -1,3 +1,5 @@
+import { movies } from '@test/stubs/movies';
+
 export const ghibliProviderMock = {
-  listMovies: jest.fn(),
+  listMovies: jest.fn().mockReturnValue(movies),
 };
