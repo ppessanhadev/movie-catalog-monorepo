@@ -18,7 +18,7 @@ export class GhibliProvider extends GhibliAdapter {
         ),
       );
 
-      return this.moviesAdapter(data);
+      return this.transform(data);
     } catch (error) {
       throw new InternalServerErrorException(error.message);
     }

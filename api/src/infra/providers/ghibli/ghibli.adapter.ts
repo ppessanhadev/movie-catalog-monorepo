@@ -1,6 +1,6 @@
 import { GhibliListMoviesResponse } from '@shared/types/GhibliListMovieResponse';
 export class GhibliAdapter {
-  protected moviesAdapter(movies: GhibliListMoviesResponse[]) {
+  protected transform(movies: GhibliListMoviesResponse[]) {
     return movies.map((movie) => {
       return {
         title: movie.title,
