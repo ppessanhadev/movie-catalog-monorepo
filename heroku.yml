@@ -5,6 +5,7 @@ setup:
 build:
   docker:
     api: api/Dockerfile
-    worker: api/Dockerfile
+release:
+  image: api
 run:
   api: yarn start:prod
