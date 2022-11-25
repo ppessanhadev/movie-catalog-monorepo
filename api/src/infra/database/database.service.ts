@@ -1,9 +1,13 @@
 import { PrismaClient } from '@prisma/client';
-import { Injectable, OnModuleInit } from '@nestjs/common';
+import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
+import { GhibliProvider } from '@infra/providers/ghibli/ghibli.provider';
 
 @Injectable()
 export class DatabaseService extends PrismaClient implements OnModuleInit {
-  constructor() {
+  constructor(
+    @Inject(GhibliProvider)
+    private ghibliProvider: GhibliProvider,
+  ) {
     super({
       log: ['query'],
     });
@@ -11,5 +15,7 @@ export class DatabaseService extends PrismaClient implements OnModuleInit {
 
   async onModuleInit() {
     await this.$connect();
+    const data = await this.ghibliProvider.listMovies();
+    await this.movie.createMany({ data });
   }
 }
