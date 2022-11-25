@@ -1,9 +1,0 @@
-build:
-  docker:
-    api: Dockerfile
-release:
-  image: api
-  command:
-    - npx primsa db push
-run:
-  api: npm run start:prod:update
