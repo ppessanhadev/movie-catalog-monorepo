@@ -1,2 +1,2 @@
-release: npx prisma generate \ npx primsa db push
-api: npm run start:prod
+release: npx prisma generate
+web: npm run start:prod:update
