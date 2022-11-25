@@ -1,10 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import {
-  INestApplication,
-  Inject,
-  Injectable,
-  OnModuleInit,
-} from '@nestjs/common';
+import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
 import { GhibliProvider } from '@infra/providers/ghibli/ghibli.provider';
 
 @Injectable()
