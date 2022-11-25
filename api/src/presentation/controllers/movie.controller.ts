@@ -24,7 +24,6 @@ export class MovieController {
   @CustomQueryGet({
     route: 'update',
     summary: 'This route lists all movies with pagination',
-    responseType: MovieResponse,
     code: 204,
   })
   public async update() {

@@ -9,7 +9,7 @@ export const CustomQueryGet = (option: QueryGetOption) => {
   return applyDecorators(
     ApiOperation({ summary }),
     ApiQuery({ name }),
-    ApiOkResponse({ type: responseType }),
+    ApiOkResponse({ type: responseType || '' }),
     Get(route),
     HttpCode(code),
   );
