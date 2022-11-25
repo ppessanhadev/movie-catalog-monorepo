@@ -23,7 +23,7 @@ export class MovieController {
 
   @CustomQueryGet({
     route: 'update',
-    summary: 'This route lists all movies with pagination',
+    summary: 'Updates list movies from studio ghiblis api',
     code: 204,
   })
   public async update() {
