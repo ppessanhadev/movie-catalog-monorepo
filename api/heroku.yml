@@ -1,0 +1,9 @@
+build:
+  docker:
+    api: Dockerfile
+release:
+  image: api
+  command:
+    - npx prisma db push
+run:
+  api: npm run start:prod
