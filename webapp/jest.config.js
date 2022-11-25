@@ -6,7 +6,6 @@ module.exports = {
     '!<rootDir>/src/**/*mock*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/styles/**/*.{js,jsx,ts,tsx}',
     '!<rootDir>/src/pages/**/*.{js,jsx,ts,tsx}',
-    '!<rootDir>/**/stories.{js,jsx,ts,tsx}',
     '!<rootDir>/node_modules/',
   ],
   testEnvironment: 'jsdom',
