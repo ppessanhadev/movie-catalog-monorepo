@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://wa-movie-backend.herokuapp.com/',
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 35000,
 });
 
