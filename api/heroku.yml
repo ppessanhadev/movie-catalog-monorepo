@@ -1,6 +1,6 @@
 build:
   docker:
-    api: Dockerfile
+    api: Dockerfile.prod
 release:
   image: api
 run:
