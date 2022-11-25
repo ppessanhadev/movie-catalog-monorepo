@@ -1,3 +1,4 @@
+import helmet from 'helmet';
 import { AppModule } from './app.module';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
@@ -17,7 +18,9 @@ const swaggerConfig = (app: INestApplication) => {
 const appConfig = (app: INestApplication) => {
   app
     .enableVersioning({ type: VersioningType.URI, defaultVersion: '1' })
-    .setGlobalPrefix('api');
+    .setGlobalPrefix('api')
+    .use(helmet())
+    .enableCors();
 };
 
 const initialize = async () => {
