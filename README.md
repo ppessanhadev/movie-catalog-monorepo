@@ -106,3 +106,21 @@ Para rodar os testes, basta rodar o seguinte comando:
   - [x] Possuir um **README** contendo a explicação do projeto, tecnologias utilizadas e como rodar;
   - [x] Estar versionado no Github;
 
+## Possiveis melhorias
+
+Como toda aplicação, sempre existe onde melhorar, visando isso estou fazendo uma lista para possíveis melhorias para implementação.
+
+  - `backend`:
+    - Implementação de testes de integração;
+    - Maior cobertura de testes unitários;
+    - Formas de autenticação em requisições para impedir chamadas em massa;
+  - `frontend`:
+    - Cobertura completa de testes unitários;
+    - Implementação de documentação para componentes com [Storybook]();
+    - Alterar context api para uma biblioteca que facilita a comunicação e compartilhamente de informações entre os componentes, como [React Query]() ou [Redux toolkit]()
+    - Implementação de teste e2e com [cypress]()
+  - `ci/cd`:
+    - Impedir push direto na branch main;
+    - Aplicar bateria de testes antes ao pull request;
+    - Permitir o merge apenas quando o coverage de testes é batido;
+    - Permitir o merge apenas quando não houver problemas de lint;
