@@ -2,7 +2,6 @@
 
 A aplicação tem como objetivo ser um catálogo de filmes com informações básicas de título, descrição, diretor e produtor.
 
-
 ### Visão geral
   Durante o desenvolvimento, eu utilizei:
   - [NestJS](https://docs.nestjs.com) para o desenvolvimento no backend;
@@ -18,9 +17,29 @@ Link: https://wa-movie-backend.herokuapp.com/api/docs
 
 A aplicação backend foi construída utilizando [NestJS](https://docs.nestjs.com) com o intuito de escalamento do projeto.
 
-Em conjunto com o backend, também construí a aplicação utilizando conceitos de DDD, Orientação a objetos e Clean Code.
-
 O projeto também possuí uma documentação no [Swagger](https://swagger.io) e link acima ao qual já redireciona com todas as informações das rotas disponíveis.
+
+**Sobre a arquitetura**
+
+Também construí a aplicação utilizando Arquitetura hexagonal com conceitos de DDD, Orientação a objetos e Clean Code.
+
+Ela está divida nas seguintes camadas:
+  - `presentation`: Responsável por conter tudo o que é resposável pelo fluxo de entrada e saída da aplicação, podendo incluir validações de entrada e tratativa de erro caso seja necessário.
+  - `domain`: Responsável por conter toda a lógica e regra de negócio através de seus serviços.
+  - `infra`: Responsável por conter e gerenciar comunicações externas, seja com banco de dados, com provedores como APIs externas e microserviços.
+  - `shared`: Responsável por conter tudo aquilo que pode ser compartilhado entre outras camadas, como tipagens e configurações de ambiente.
+
+**Sobre o banco de dados**
+
+Ao executar a aplicação, com os dados configurados corretamente, de inicio é realizado uma requisição ao qual popula o banco com os dados mais recentes vindo da API de extração selecionada.
+
+O banco só tem uma tabela e ela está da seguinte forma:
+
+|       **id**       |    **title**   | **director** |  **productor**  | **description** |
+|:------------------:|:--------------:|:------------:|:---------------:|:---------------:|
+| 2d419306-345a-458f | Koi no katachi | Naoko Yamada | Kyoto animation |  Wow such movie |
+|  9e48-483acf1a4534 |     Matrix     |  Wachowskis  |   Warner bros   |   Mindblowing   |
+|  6b5be6e9-d8b4dfw  |     Closer     | Mike Nichols |     Columbia    |  About peoples  |
 
 **Rodando localmente com docker/docker-compose**
 
@@ -32,10 +51,9 @@ A partir da raiz do projeto em seu terminal, siga os próximos passos para rodar
 
 **Rodando testes**
 
-Após rodar a aplicação localmente, siga os seguintes passos:
+Para rodar os testes, basta rodar o seguinte comando:
 
-1. `$ docker-compose exec api sh`
-2. `$ npm run test`
+1. `$ npm run test`
 
 ## Frontend
 
@@ -46,6 +64,8 @@ A aplicação front foi construída utilizando [React](https://pt-br.reactjs.org
 Também utilizei Context API para prover os dados e funções que tem ligacão com requisições, e axios para realiza-los.
 
 O projeto conta com a estilização desenvolvida em [styled-components](https://styled-components.com), para facilitar herença, hierarquia, condicionais e componentização de estilos.
+
+Todo o front foi desenvolvido da forma mais descomplicada com o intuíto de deixar toda a lógica e trabalho "braçal" necessário com o backend, assim, facilitando ao máximo seu desenvolvimento.
 
 **Rodando localmente**
 
@@ -64,7 +84,7 @@ Para rodar os testes, basta rodar o seguinte comando:
 1. `$ npm run test`
 
 
-### Instruções de desenvolvimento
+## Instruções de desenvolvimento
 **Regras**:
   - `Backend`:
     - [x] Deverá ser uma API desenvolvida em NodeJS;
