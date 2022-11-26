@@ -12,7 +12,7 @@ A aplicação tem como objetivo ser um catálogo de filmes com informações bá
   - [Github Actions](https://github.com/features/actions) para automatização de deploy;
   - Heroku como plataforma em cloud para hospedagem;
 
-### Backend
+## Backend
 
 Link: https://wa-movie-backend.herokuapp.com/api/docs
 
