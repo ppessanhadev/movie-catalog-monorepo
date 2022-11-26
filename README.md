@@ -24,7 +24,7 @@ O projeto também possuí uma documentação no [Swagger](https://swagger.io) e 
 
 **Rodando localmente com docker/docker-compose**
 
-Siga os próximos passos para rodar a API localmente:
+A partir da raiz do projeto em seu terminal, siga os próximos passos para rodar a API localmente:
 1. `$ cd api`
 2. `$ cp .env.example .env`
 3. `$ docker-compose up -d`
@@ -39,19 +39,19 @@ Após rodar a aplicação localmente, siga os seguintes passos:
 
 ## Frontend
 
-Link: https://wa-movie.herokuapp.com/
+Link: https://wa-catalog.herokuapp.com/
 
-A aplicação front foi construída utilizando [React]() em conjunto com [Vite]() e [Vitest]() para builds mais rápidas e eficientes.
+A aplicação front foi construída utilizando [React](https://pt-br.reactjs.org) em conjunto com [Vite](https://vitejs.dev) e [Vitest](https://vitest.dev) para builds mais rápidas e eficientes.
 
 Também utilizei Context API para prover os dados e funções que tem ligacão com requisições, e axios para realiza-los.
 
-O projeto conta com a estilização desenvolvida em [styled-components](), para facilitar herença, hierarquia, condicionais e componentização de estilos.
+O projeto conta com a estilização desenvolvida em [styled-components](https://styled-components.com), para facilitar herença, hierarquia, condicionais e componentização de estilos.
 
 **Rodando localmente**
 
 Atenção, para o funcionamento correto da aplicação é necessário que api esteja rodando!
 
-A partir da raiz do projeto, siga os próximos passos para rodar a front localmente:
+A partir da raiz do projeto em seu terminal, siga os próximos passos para rodar a front localmente:
 1. `$ cd webapp`
 2. `$ cp .env.example .env`
 3. `$ npm run dev`
