@@ -116,11 +116,11 @@ Como toda aplicação, sempre existe onde melhorar, visando isso estou fazendo u
     - Formas de autenticação em requisições para impedir chamadas em massa;
   - `frontend`:
     - Cobertura completa de testes unitários;
-    - Implementação de documentação para componentes com [Storybook]();
-    - Alterar context api para uma biblioteca que facilita a comunicação e compartilhamente de informações entre os componentes, como [React Query]() ou [Redux toolkit]()
-    - Implementação de teste e2e com [cypress]()
+    - Implementação de documentação para componentes com [Storybook](https://storybook.js.org);
+    - Alterar context api para uma biblioteca que facilita a comunicação e compartilhamente de informações entre os componentes, como [React Query](https://react-query-v3.tanstack.com) ou [Redux toolkit](https://redux-toolkit.js.org)
+    - Implementação de teste e2e com [cypress](https://www.cypress.io)
   - `ci/cd`:
     - Impedir push direto na branch main;
-    - Aplicar bateria de testes antes ao pull request;
+    - Aplicar bateria de testes ao pull request;
     - Permitir o merge apenas quando o coverage de testes é batido;
     - Permitir o merge apenas quando não houver problemas de lint;
