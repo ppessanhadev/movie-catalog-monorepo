@@ -31,6 +31,7 @@ Siga os próximos passos para rodar a API localmente:
 > > A aplicação estará rodando em http://localhost:3000
 
 **Rodando testes**
+
 Após rodar a aplicação localmente, siga os seguintes passos:
 
 1. `$ docker-compose exec api sh`
