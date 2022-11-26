@@ -16,12 +16,7 @@ export class DatabaseService extends PrismaClient implements OnModuleInit {
   async onModuleInit() {
     await this.$connect();
     const data = await this.ghibliProvider.listMovies();
+    await this.movie.deleteMany({});
     await this.movie.createMany({ data });
-  }
-
-  public async enableShutdownHooks() {
-    this.$on('beforeExit', async () => {
-      await this.movie.deleteMany({});
-    });
   }
 }
