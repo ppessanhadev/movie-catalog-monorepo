@@ -51,9 +51,10 @@ A partir da raiz do projeto em seu terminal, siga os próximos passos para rodar
 
 **Rodando testes**
 
-Para rodar os testes, basta rodar o seguinte comando:
+Para rodar os testes, basta rodar os seguintes comando:
 
-1. `$ npm run test`
+1. `$ npm install`
+2. `$ npm run test`
 
 ## Frontend
 
@@ -74,7 +75,8 @@ Atenção, para o funcionamento correto da aplicação é necessário que api es
 A partir da raiz do projeto em seu terminal, siga os próximos passos para rodar a front localmente:
 1. `$ cd webapp`
 2. `$ cp .env.example .env`
-3. `$ npm run dev`
+3. `$ npm install`
+4. `$ npm run dev`
 > > A aplicação estará rodando em http://localhost:5173
 
 **Rodando testes**
@@ -82,7 +84,6 @@ A partir da raiz do projeto em seu terminal, siga os próximos passos para rodar
 Para rodar os testes, basta rodar o seguinte comando:
 
 1. `$ npm run test`
-
 
 ## Instruções de desenvolvimento
 **Regras**:
