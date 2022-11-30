@@ -13,7 +13,7 @@ A aplicação tem como objetivo ser um catálogo de filmes com informações bá
 
 ## Backend
 
-Link: https://wa-movie-backend.herokuapp.com/api/docs
+Link: ~~https://wa-movie-backend.herokuapp.com/api/docs~~
 
 A aplicação backend foi construída utilizando [NestJS](https://docs.nestjs.com) com o intuito de escalamento do projeto.
 
@@ -58,7 +58,7 @@ Para rodar os testes, basta rodar os seguintes comando:
 
 ## Frontend
 
-Link: https://wa-catalog.herokuapp.com/
+Link: ~~https://wa-catalog.herokuapp.com/~~ (como o free tier do heroku acabou recentemente, a aplicação não está mais em cloud nesse momento)
 
 A aplicação front foi construída utilizando [React](https://pt-br.reactjs.org) em conjunto com [Vite](https://vitejs.dev) e [Vitest](https://vitest.dev) para builds mais rápidas e eficientes.
 
