@@ -1,4 +1,4 @@
-## Desafio WA Project - Fullstack React/Node
+## Movie catalog - Fullstack React/Node
 
 A aplicação tem como objetivo ser um catálogo de filmes com informações básicas de título, descrição, diretor e produtor.
 
